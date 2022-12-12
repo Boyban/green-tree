@@ -19,6 +19,6 @@ do
 
 	echo $DATE
    	
-   	DATE=$(date +%mY-%m-%d -d "$DATE + 1 day")
+   	DATE=$(date -j -v+1d -f "+%mY-%m-%d" $DATE +%mY-%m-%d)
 
 done
