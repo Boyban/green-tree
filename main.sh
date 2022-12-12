@@ -16,9 +16,9 @@ do
 	msg='commit'${DATE}
 
 	git commit -m $msg --date="$DATE"
-   	
-   	DATE=$(date +%mY-%m-%d -d "$DATE + 1 day")
 
 	echo $DATE
+   	
+   	DATE=$(date +%mY-%m-%d -d "$DATE + 1 day")
 
 done
