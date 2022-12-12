@@ -17,6 +17,8 @@ do
 
 	git commit -m $msg --date="$DATE"
 
-   	DATE=$(date -j -v+1d -f "%Y-%m-%d" "$DATE" "+%Y-%m-%d")
+	timestamp=$(date -j -f "%Y-%m-%d" "$DATE" "+%s")
+
+   	DATE=$(date -j -f "%s" $(($timestamp + 86400)) "+%Y-%m-%d")
 	
 done
