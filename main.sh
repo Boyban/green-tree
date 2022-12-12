@@ -17,8 +17,6 @@ do
 
 	git commit -m $msg --date="$DATE"
 
-	echo $DATE
-   	
-   	DATE=$(date -j -v+1d -f "+%mY-%m-%d" $DATE +%mY-%m-%d)
-
+   	DATE=$(date -v+1d -f "+%mY-%m-%d" $DATE +%mY-%m-%d)
+	
 done
