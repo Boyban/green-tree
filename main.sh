@@ -19,4 +19,6 @@ do
    	
    	DATE=$(date +%mY-%m-%d -d "$DATE + 1 day")
 
+	echo $DATE
+
 done
